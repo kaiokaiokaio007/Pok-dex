@@ -1,0 +1,226 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #e8f0f2;
+
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+
+}
+
+.pokedex {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 30px;
+
+}
+
+.card {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+
+}
+
+.card:hover .card-image {
+    animation: float 3s ease-in-out infinite;
+
+}
+
+.card-title {
+    font-size: 1.0em;
+
+    margin: 10px 0;
+    color: #444;
+
+}
+
+.card-subtitle {
+    font-size: 0.9em;
+
+    color: rgb(255, 254, 254);
+
+    margin-bottom: 15px;
+}
+
+.card.fire {
+    background: linear-gradient(to top, #f54e40, transparent);
+}
+ 
+.card.water {
+    background: linear-gradient(to top, #4e97f5, transparent);
+}
+ 
+.card.grass {
+    background: linear-gradient(to top, #4caf50, transparent);
+}
+ 
+.card.electric {
+    background: linear-gradient(to top, #f7d02c, transparent);
+}
+ 
+.card.ice {
+    background: linear-gradient(to top, #a8d8e0, transparent);
+}
+ 
+.card.fighting {
+    background: linear-gradient(to top, #c22e28, transparent);
+}
+ 
+.card.poison {
+    background: linear-gradient(to top, #a33ea1, transparent);
+}
+ 
+.card.bug {
+    background: linear-gradient(to top, #a6b91a, transparent);
+}
+ 
+.card.rock {
+    background: linear-gradient(to top, #b6a136, transparent);
+}
+ 
+.card.ghost {
+    background: linear-gradient(to top, #735797, transparent);
+}
+ 
+.card.steel {
+    background: linear-gradient(to top, #b7b7ce, transparent);
+}
+ 
+.card.fairy {
+    background: linear-gradient(to top, #d685ad, transparent);
+}
+ 
+.card.normal {
+    background: linear-gradient(to top, #a8a77a, transparent);
+}
+ 
+.card.psychic {
+    background: linear-gradient(to top, #f85888, transparent);
+}
+ 
+.card.flying {
+    background: linear-gradient(to top, #a98ff3, transparent);
+}
+.card.ground{
+    background: linear-gradient(to top, rgb(177, 137, 19), transparent);
+}
+.card.dragon{
+    background: linear-gradient(to top,rgb(65, 0, 119),transparent);
+}
+.card.dark{
+    background: linear-gradient(to top, rgb(43, 43, 43),transparent);
+}
+ 
+.card.double-type {
+    background: linear-gradient(to top, transparent, transparent);
+}
+ 
+.card.double-type.fire {
+    background: linear-gradient(to top, #f54e40, transparent);
+}
+ 
+.card.double-type.water {
+    background: linear-gradient(to top, #4e97f5, transparent);
+}
+ 
+.card.double-type.grass {
+    background: linear-gradient(to top, #4caf50, transparent);
+}
+ 
+.card.double-type.electric {
+    background: linear-gradient(to top, #f7d02c, transparent);
+}
+
+.card.double-type {
+    background: linear-gradient(to top, transparent, transparent);
+}
+
+.card.double-type::before,
+.card.double-type::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+
+}
+
+.card.double-type.fire::before,
+.card.double-type.fire::after {
+    background-color: #f54e40;
+}
+
+.card.double-type.water::before,
+.card.double-type.water::after {
+    background-color: #4e97f5;
+}
+
+.card.double-type.grass::before,
+.card.double-type.grass::after {
+    background-color: #4caf50;
+}
+
+.card.double-type.electric::before,
+.card.double-type.electric::after {
+    background-color: #f7d02c;
+}
+
+
+
+@media (max-width: 600px) {
+    .pokedex {
+        grid-template-columns: 1fr;
+
+    }
+}
